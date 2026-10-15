@@ -1,15 +1,16 @@
+
 <?php
 
-use Illuminate\\Support\\Facades\\Route;
+use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
+Route::get('/home', function () {
+    return 'Welcome to Home Page';
 });
 
 Route::get('/about', function () {
-    return view('about');
+    return 'Welcome to About Page';
 });
 
-Route::get('/contact', function () {
-    return view('contact');
+Route::get('/student/{name}', function ($name) {
+    return 'Student Name: ' . $name;
 });
